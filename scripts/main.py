@@ -43,7 +43,7 @@ class ActivationScript(scripts.Script):
         active = False
         for key, parameter in p.sd_model.named_parameters():
             if parameter.grad is None:
-                print(key)
+                print(f'key does not have gradients: {key}')
             parameter.requires_grad = False
 
 
